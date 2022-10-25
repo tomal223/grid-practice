@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
+
+    <title>Grid Practice</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        h2 {
+            padding-left: 40px;
+            padding-top: 0px;
+            font-size: 40px;
+            line-height: 1;
+            color: #000;
+        }
+
+        .container {
+            max-width: 340px;
+            margin: 0 auto;
+            background: #e5e5e5;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 170px);
+            grid-template-rows: repeat(2, minmax(180px, min-content));  
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            max-width: 150px;
+        }
+
+        .item1 {
+            background: orangered;
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+            align-self: flex-start;
+            justify-self: start;
+        }
+
+        .item2 {
+            background: yellowgreen;
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+            align-self: center;
+            justify-self: center;
+        }
+
+        .item3 {
+            background: slateblue; 
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+            align-self: flex-end;
+            justify-self: end;
+        } 
+ 
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+
+    <!--------- Grid area start --------->
+    <main class="main">
+
+        <h2>CSS Grid Overlaping</h2>
+
+        <div class="container">
+
+            <div class="item item1">One Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere distinctio consectetur deserunt saepe minima eos laborum adipisci consequatur vitae soluta! Lorem ipsum dolor sit amet.
+            </div>
+            <div class="item item2">Two Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et enim facere similique consequuntur? Molestias assumenda odit minus, velit qui molestiae est soluta omnis ut cum?</div>
+            <div class="item item3">
+                Three Lorem ipsum dolor sit amet consectetur adipisicing elit. Est cum aut voluptatum vero repudiandae repellendus culpa consequuntur provident sapiente iure, vitae, deserunt, natus tempora error.
+            </div> 
+
+        </div>
+    </main>
+    <!--------- Grid area start --------->
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
+
+    <title>Grid Practice</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 24px;
+        }
+
+        h2 {
+            padding-left: 40px;
+            padding-top: q0px;
+            font-size: 50px;
+            line-height: 1;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #e5e5e5;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: repeat(2, 180px) 120px;
+            padding: 12px;
+            /* grid-row-gap: 15px;
+            grid-column-gap: 15px; */
+            grid-gap: 15px 15px;
+        }
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .item1 {
+            background: orangered;
+            /* grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 3;
+            grid-column-end: 4; */
+            /* grid-row: 2 / 3;
+            grid-column: 3/4; */
+            grid-area: 2 / 3 / 3 / 4;
+        }
+
+        .item2 {
+            background: yellowgreen;
+        }
+
+        .item3 {
+            background: slateblue;
+            grid-row: 2 / 4;
+        }
+
+        .item4 {
+            background: hotpink;
+        }
+
+        .item5 {
+            background: lightsalmon;grid-column: span 2;
+        }
+
+        .item6 {
+            background: goldenrod;
+            /* grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 2; */
+            /* grid-row: 1 / 2;
+            grid-column: 1/2; */
+            grid-area: 1 / 1 / 2 / 3;
+        }
+        
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+
+    <!--------- Grid area start --------->
+    <main class="main">
+
+        <h2>CSS Grid</h2>
+
+        <div class="container">
+
+            <div class="item item1">One</div>
+            <div class="item item2">Two</div>
+            <div class="item item3">Three</div>
+            <div class="item item4">Four</div>
+            <div class="item item5">Five</div>
+            <div class="item item6">Six</div>
+
+        </div>
+    </main>
+    <!--------- Grid area start --------->
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+/* Base CSS */
+
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+
+.aligncenter {
+    display: block;
+    margin: 0 auto 15px;
+}
+
+a:focus {
+    outline: 0 solid
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 15px;
+    color: #1B1B21;
+    font-family: 'SF Pro Display';
+}
+
+body {
+    color: #1E1F20;
+    font-weight: 400;
+    font-family: 'SF Pro Display';
+    background: #ffffc6;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SFProDisplay-Regular.woff2') format('woff2'), url('../fonts/SFProDisplay-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SFProDisplay-Bold.woff2') format('woff2'), url('../fonts/SFProDisplay-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SFProDisplay-Semibold.woff2') format('woff2'), url('../fonts/SFProDisplay-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SFProDisplay-Medium.woff2') format('woff2'), url('../fonts/SFProDisplay-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SFProDisplay-Light.woff2') format('woff2'), url('../fonts/SFProDisplay-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+a:hover {
+    text-decoration: none
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/*----------- Grid Area Start --------------*/
+
+
+
+.parent-element {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    margin-bottom: 50px;
+}
+
+.child-element {
+    background-color: #ef4444;
+    color: #ffffff;
+    font-size: 17px;
+    text-align: center;
+    line-height: 1.7;
+    padding: 20px;
+}
+
+.child-element:last-child {
+    grid-column: 1/ 4;
+}
+
+.child-element h3 {
+    font-size: 26px;
+    margin-bottom: 12px;
+    line-height: 1.2;
+    padding-top: 9px;
+}
+
+.child-element:nth-child(1) {
+    grid-row: 1/3;
+    grid-column: 1/2;
+}
+
+.wrapper>* {
+    width: 100%;
+    background: #fb6d4c;
+    text-align: center;
+    padding: 35px 0;
+    line-height: 1;
+    font-size: 35px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.aligncenter {
+    transition: .3s;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    height: 505px;
+    grid-template-rows: 100px auto 100px;
+    grid-template-areas:
+        "h h h h h h h h h h h"
+        "m m m c c c c c c c c"
+        "f f f f f f f f f f f"
+    ;
+    margin-bottom: 50px;
+}
+
+.header {
+    background: #293462;
+    /* grid-column: 1/ -1; */
+    grid-area: h;
+}
+
+.menu {
+    background: #F24C4C;
+    /* grid-column: 1/4; */
+    grid-area: m;
+}
+
+.content {
+    background: #EC9B3B;
+    /* grid-column: 4/13; */
+    grid-area: c;
+}
+
+.footer {
+    background: #F7D716;
+    /* grid-column: 1/-1; */
+    grid-area: f;
+}
+
+
+
+/*----------- Gallery Area Start --------------*/
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 9px;
+    grid-auto-flow: dense;
+    grid-template-rows: repeat(6, minmax(160px, .8fr));
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.big {
+    grid-row: auto / span 2;
+    grid-column: auto / span 2;
+}
+
+.vertical {
+    grid-row: span 2;
+}
+
+.horizontal {
+    grid-column: span 2;
+}
+
+/*----------- Gallery Area End --------------*/
+
+
+
+
+/*----------- Grid Area End --------------*/

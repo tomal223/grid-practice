@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
+
+    <title>Grid Practice</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 24px;
+        }
+
+        h2 {
+            padding-left: 40px;
+            padding-top: q0px;
+            font-size: 50px;
+            line-height: 1;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #e5e5e5;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            display: grid;
+            grid-gap: 14px;
+            grid-template-rows:[header-start] 100px [header-end menu-start] 60px [menu-end box-start] 130px [box-end content-start] 400px [content-end footer-start] 60px [footer-end];
+            grid-template-columns: repeat(3, [col-start] 1fr [col-end]);
+        }
+
+        .container>div {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            background: rgb(42, 43, 42);
+            font-size: 18px;
+            color: #fff;
+            font-weight: 500;
+            padding: 15px;
+        }
+        .main .header {
+            background: orangered;
+            /* grid-area: 1 / 1 / 2 / -1; */
+            grid-row: header-start /  header-end;
+            grid-column: col-start 1 / col-end 3;
+        }
+        .main .menu {
+            background: yellowgreen;
+            grid-column: col-start 1 / col-end 3;
+        }
+        .main .box1 {
+            background: rgb(116, 58, 173);
+            grid-column: col-start 1 / col-end 1;
+        }
+        .main .box2 {
+            background: palevioletred;
+            grid-column: col-start 2 / col-end 2;
+        }
+        .main .content {
+            background: lightsalmon;
+            grid-area: 4 / 1 / 5 / 3;
+        }
+
+        .main .sidebar {
+            background: slateblue;
+            grid-row: menu-end / content-end;
+            grid-column: col-start 3 / col-end 3;
+        }
+
+        .main .footer {
+            background: goldenrod;
+            /* grid-column: 1 / -1; */
+            grid-column: col-start 1 / col-end 3;
+        }
+        
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+
+    <!--------- Grid area start --------->
+    <main class="main">
+
+        <h2>CSS Grid</h2>
+
+        <div class="container">
+
+            <div class="header">Header</div>
+            <div class="menu">Menu</div>
+            <div class="box1">Box1</div>
+            <div class="box2">Box2</div>
+            <div class="content">Content</div>
+            <div class="sidebar">Sidebar</div>
+            <div class="footer">Footer</div>
+
+        </div>
+    </main>
+    <!--------- Grid area start --------->
+
+
+
+
+
+
+</body>
+
+</html>

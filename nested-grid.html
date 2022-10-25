@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
+
+    <title>Grid Practice</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 17px;
+        }
+
+        h2 {
+            padding-left: 40px;
+            padding-top: q0px;
+            font-size: 40px;
+            line-height: 1;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #e5e5e5;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns: repeat(2 , 1fr);
+            grid-template-rows: repeat(2, minmax(180px, min-content));
+            padding: 12px; 
+            grid-auto-flow: row dense;
+            grid-gap: 15px 15px;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .item1 {
+            background: orangered;   
+        }
+
+        .item2 {
+            background: yellowgreen;
+        }
+
+        .item3 {
+            background: slateblue;
+            display: grid;
+            grid-template-rows: repeat(2, 100px);
+            grid-template-columns: repeat(2, 1fr);
+            align-items: stretch;
+            grid-gap: 10px;
+        }
+        .item3 > div{
+            background: #fff; 
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+        }
+
+        .item4 {
+            background: hotpink;
+        }
+
+        .item5 {
+            background: lightsalmon;
+            grid-column: span 2;
+        }
+
+        .item6 {
+            background: goldenrod;
+            grid-row: span 3;
+        }
+
+        .item7 {
+            background: honeydew;
+        }
+
+        .item8 {
+            background: fuchsia;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+
+    <!--------- Grid area start --------->
+    <main class="main">
+
+        <h2>CSS Nested Grid</h2>
+
+        <div class="container">
+
+            <div class="item item1">One 
+            </div>
+            <div class="item item2">Two </div>
+            <div class="item item3">
+                <div class="subitem1">Sub Item</div>
+                <div class="subitem2">Sub Item</div>
+                <div class="subitem3">Sub Item</div>
+            </div>
+            <div class="item item4">Four</div> 
+
+        </div>
+    </main>
+    <!--------- Grid area start --------->
+
+
+
+
+
+
+</body>
+
+</html>

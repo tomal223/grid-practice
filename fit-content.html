@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
+
+    <title>Grid Practice</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 17px;
+        }
+
+        h2 {
+            padding-left: 40px;
+            padding-top: q0px;
+            font-size: 40px;
+            line-height: 1;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #e5e5e5;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns:  fit-content(300px)fit-content(300px) 200px;
+            grid-template-rows: repeat(2, minmax(150px, min-content)); 
+            padding: 12px;
+            grid-auto-rows: 80px;
+            grid-auto-flow:  row dense;
+            grid-gap: 15px 15px;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .item1 {
+            background: orangered; 
+            grid-row: 1 / 3;
+            align-items: flex-start;
+        }
+
+        .item2 {
+            background: yellowgreen;
+        }
+
+        .item3 {
+            background: slateblue;
+        }
+
+        .item4 {
+            background: hotpink;
+        }
+
+        .item5 {
+            background: lightsalmon;
+            grid-column: span 2;
+        }
+
+        .item6 {
+            background: goldenrod; 
+            grid-row: span 3;
+        }
+
+        .item7 {
+            background: honeydew;
+        }
+
+        .item8 {
+            background: fuchsia;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+
+    <!--------- Grid area start --------->
+    <main class="main">
+
+        <h2>CSS Grid Fit Content</h2>
+
+        <div class="container">
+
+            <div class="item item1">One Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, dolore. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio eos fugiat ducimus sequi tempora repellendus sed laborum quidem nostrum hic!
+            </div>
+            <div class="item item2">Two Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque facilis, error velit asperiores voluptatum cumque labore nam maiores possimus odit expedita dicta numquam laboriosam dolore, ipsum inventore earum minima praesentium.</div>
+            <div class="item item3">Three</div>
+            <div class="item item4">Four</div>
+            <div class="item item5">Five</div>
+            <div class="item item6">Six</div>
+            <div class="item item7">Seven</div>
+            <div class="item item8">Eight</div>
+
+        </div>
+    </main>
+    <!--------- Grid area start --------->
+
+
+
+
+
+
+</body>
+
+</html>
